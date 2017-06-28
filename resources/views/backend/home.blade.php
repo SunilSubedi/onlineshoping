@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Dashboard</title>
-</head>
-<body>
-<h2>Welcome</h2>
-</body>
-</html>
+@extends('backend.template.admin-main')
+@section('content')
+<div>
+ <h3> Welcome to Dashboard</h3>
+
+</div>
+
+@endsection
