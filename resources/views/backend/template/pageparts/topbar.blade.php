@@ -1,6 +1,6 @@
  <div class="topbar">
       <div class="logo">
-        <img src="images/logo.jpg" class="img-circle" style="margin: 10px"  alt="onlineshoping" />
+        <img src="{{asset('images/logo.jpg')}}" class="img-circle" style="margin: 10px"  alt="onlineshoping" />
       </div>
 
       <div class="search">
