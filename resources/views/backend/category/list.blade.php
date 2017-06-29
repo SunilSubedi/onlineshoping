@@ -20,6 +20,7 @@
                   <thead>
                     <tr>
                         <th><em class="fa fa-cog"></em></th>
+                        <th><em class="fa fa-cog"></em></th>
                         <th class="hidden-xs">ID</th>
                         <th>Name</th>
                         <th>Created At</th>
@@ -29,20 +30,27 @@
                   </thead>
                   <tbody>
                    @foreach($category as $cat)
-    
-  
+                 
+      
                           <tr>
                             <td align="center">
                               <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <button type="button" class="btn btn-danger" id="dele" data-id="{{$cat->id}}">
-                              <em class="fa fa-trash"></em>
-                             </button>
-                            </td>
+                              </td>
+                             <td>
+                                 {{Form::open(['route'=>['category.destroy',$cat->id],'method'=>'DELETE'])}}
+                                 {!! Form::submit('Delete',['class'=>' btn btn-danger fa-trash-o'])!!}
+                                 {{Form::close()}}
+                               
+
+                              </td>                           
+                                                      
+                                                        </td>
                             <td>{{$cat->id }}</td>
                             <td>{{ $cat->name }}</td>
                             <td> {{ $cat->created_at }} </td>
                             <td> {{ $cat->updated_at }} </td>
                           </tr>
+                         
                       @endforeach
                         </tbody>
                 </table>
