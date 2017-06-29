@@ -19,7 +19,8 @@ class CategoryController extends Controller
     }
     public function index()
     {
-        return view('backend.category.list');
+        $category=Category::all();
+        return view('backend.category.list')->withCategory($category);
     }
 
     /**
@@ -64,7 +65,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        //return redirect('category.create');
+        //return redirect('category.create');
     }
 
     /**
@@ -98,6 +100,6 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        return redirect('category.create');
     }
 }

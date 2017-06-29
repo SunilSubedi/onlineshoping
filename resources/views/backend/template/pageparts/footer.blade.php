@@ -3,5 +3,6 @@
     <script>
 
     </script>
+    <script src="{{asset('js/ajax.js') }}" type="text/javascript"></script>
   </body>
 </html>
