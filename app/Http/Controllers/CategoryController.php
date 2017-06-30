@@ -20,7 +20,7 @@ class CategoryController extends Controller
     }
     public function index()
     {
-        $category=Category::all();
+        $category=Category::paginate(5);
         return view('backend.category.list')->withCategory($category);
     }
 
