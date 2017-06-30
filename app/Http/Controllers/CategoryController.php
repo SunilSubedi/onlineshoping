@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Session;
 
 class CategoryController extends Controller
 {
@@ -51,7 +52,7 @@ class CategoryController extends Controller
        $category = new Category;
        $category->name=$request->name;
        $category->save();
-
+       Session::flash('success','Sucessfully Inserted');
        return redirect()->route('category.index');
       
 
@@ -75,9 +76,10 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category= Category::find($id);
+        return view('backend.category.edit')->withCategory($category);
     }
 
     /**
@@ -87,9 +89,20 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+                'name'=>'required',
+
+            ]);
+       $category = Category::find($id);
+       $category->name= $request->name;
+       $category->update();
+       Session::flash('success','Sucessfully Updated');
+
+       return redirect()->route('category.index');
+
+
     }
 
     /**
@@ -102,6 +115,7 @@ class CategoryController extends Controller
     {
         $category=Category::find($id);
         $category->delete();
+        Session::flash('success','Sucessfully Deleted');
                 return redirect()->route('category.index');
     }
 }

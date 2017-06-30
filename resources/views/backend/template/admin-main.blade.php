@@ -8,7 +8,7 @@
     
     <!-- SIDEBAR NAVIGATION -->
     <div class="col-md-10">
-    
+    @include('backend.template.pageparts.session_message')
     @yield('content')
    
     </div>

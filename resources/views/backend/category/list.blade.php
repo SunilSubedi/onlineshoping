@@ -34,7 +34,7 @@
       
                           <tr>
                             <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                              <a class="btn btn-default" href="{{route('category.edit',$cat->id)}}"><em class="fa fa-pencil"></em></a>
                               </td>
                              <td>
                                  {{Form::open(['route'=>['category.destroy',$cat->id],'method'=>'DELETE'])}}
