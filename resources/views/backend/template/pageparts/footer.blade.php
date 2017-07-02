@@ -4,5 +4,6 @@
 
     </script>
     <script src="{{asset('js/ajax.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset('ckeditor/ckeditor.js')}}"></script>
   </body>
 </html>

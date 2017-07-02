@@ -8,7 +8,7 @@ class Category extends Model
 {
     protected $table = 'categories';
 
-    public funnction product()
+    public function product()
     {
     	return $this->belongsTo('App\Product');
     }
