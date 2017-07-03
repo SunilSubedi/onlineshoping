@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Product;
 use  Session;
+use Image;
 class ProductController extends Controller
 {
     /**
@@ -56,12 +57,20 @@ class ProductController extends Controller
         $product = new Product();
         $product->title=$request->title;
         $product->description = $request->description;
-        $product->image = $request->image;
         $product->category_id = $request->category_id;
         $product->sub_category = $request->sub_category;
         $product->price = $request->price;
         $product->quantity= $request->quantity;
         $product->status = $request->status;
+        if($request->hasfile('image'))
+        {
+           $name = $request->image;
+           $filename = time().'.'. $name->getClientOriginalName();
+           $location = public_path('/images/'.$filename);
+           Image::make($name)->resize(500,300)->save($location);
+           $product->image = $filename;
+
+        }
         $product->save();
         Session::flash('success','Sucessfully saved');
         return redirect()->route('product.index');

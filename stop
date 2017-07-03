@@ -1,0 +1,71 @@
+[33mcommit 1aae5d535c7fb0c0cd4221de4d18dad9706faad9[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Sun Jul 2 07:55:53 2017 +0545
+
+    Added column category_name in products table
+
+[33mcommit c3af18dd6ab33110bc192b91adbd3805438a3fdc[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Sun Jul 2 07:47:06 2017 +0545
+
+    products table is created with migration
+
+[33mcommit 45fcca4b1b29b3be21b2cfc2a496d0def0051e6c[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Fri Jun 30 08:45:12 2017 +0545
+
+    Pagination in category
+
+[33mcommit d393d80a2941d25609b1282521dc4330a13cd4e2[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Fri Jun 30 08:27:23 2017 +0545
+
+    Update Category and Session flash message
+
+[33mcommit 53c502abaa3adb4c2e8930505f06da860c972321[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Thu Jun 29 18:42:01 2017 +0545
+
+    Delete Category from crud
+
+[33mcommit a055661de5432628df540bc60eeab1401550b36e[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Thu Jun 29 14:39:43 2017 +0545
+
+    Doing some ajax thing for delete not complete yet
+
+[33mcommit 998d62785ea91ba29d1e83c79157fc8ecff4b4f7[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Thu Jun 29 13:17:47 2017 +0545
+
+    Form helper included. Category migration done and create operation is done from CRUDE
+
+[33mcommit 58808a837826f305f88e2eb53ccec3eda7a19880[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Wed Jun 28 16:47:17 2017 +0545
+
+    Admin template with blade using @extends,@yeild and @include
+
+[33mcommit 45941cd76c464382a7dd08cdd67ff034cf0ddc6e[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Wed Jun 28 09:12:42 2017 +0545
+
+    Finally finished multiauthentication
+
+[33mcommit a81e7f5dcd6b10403f1b58c81e47fc94af737b73[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Tue Jun 27 15:05:29 2017 +0545
+
+    Authentication
+
+[33mcommit 7dd5257a184f8fb82537aaff54e03c8017900834[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Tue Jun 27 13:31:42 2017 +0545
+
+    Migration is created and simple authentication
+
+[33mcommit 4858486bf29ed1bfb3f3b0d6c936c7a728f3c056[m
+Author: Sunil Subedi <sunilsubedi9@gmail.com>
+Date:   Tue Jun 27 12:55:00 2017 +0545
+
+    Initial commit
