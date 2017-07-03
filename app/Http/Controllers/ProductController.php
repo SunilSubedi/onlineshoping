@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Product;
 use Illuminate\Http\Request;
 use App\Category;
-use App\Product;
 use  Session;
 use Image;
 class ProductController extends Controller
@@ -21,7 +20,8 @@ class ProductController extends Controller
     }
     public function index()
     {
-        return view('backend.product.list');
+        $product = Product::paginate(2);
+        return view('backend.product.list')->withProduct($product);
         
     }
 
