@@ -20,7 +20,7 @@ class ProductController extends Controller
     }
     public function index()
     {
-        $product = Product::paginate(2);
+        $product = Product::paginate(4);
         return view('backend.product.list')->withProduct($product);
         
     }
@@ -96,8 +96,9 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+   {    $category = Category::all();
+        $product = Product::find($id);
+        return view('backend.product.edit')->withProduct($product)->withCategory($category);
     }
 
     /**
@@ -109,7 +110,37 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+               'title'=>'required',
+             'description'=>'required',
+             'image' =>'required',
+             'category_id'=>'required',
+             'sub_category' =>'required',
+             'price' =>'required|integer',
+             'quantity' =>'required|integer',
+            ]);
+
+       $product = Product::find($id);
+        $product->title=$request->title;
+        $product->description = $request->description;
+        $product->category_id = $request->category_id;
+        $product->sub_category = $request->sub_category;
+        $product->price = $request->price;
+        $product->quantity= $request->quantity;
+        $product->status = $request->status;
+       if($request->hasfile('image'))
+        {
+           $name = $request->image;
+           $filename = time().'.'. $name->getClientOriginalName();
+           $location = public_path('/images/'.$filename);
+           Image::make($name)->resize(500,300)->save($location);
+           $product->image = $filename;
+
+        }
+        $product->update();
+        Session::flash('success','Successfully Updated');
+        return redirect()->route('product.index');
+      
     }
 
     /**

@@ -3,25 +3,26 @@
 @section('content')
 <div>
  <h3> Welcome</h3>
- <div class="col-md-11 col-md-offset-1">
+ <div class="col-md-12">
 
             <div class="panel panel-default panel-table">
               <div class="panel-heading">
                 <div class="row">
-                  <div class="col col-xs-10">
+                  <div class=" col-xs-8 col-md-8">
                     <h3 class="panel-title">Product List</h3>
                   </div>
-                  <div class="col col-xs-10 text-right">
+                  <div class=" col-xs-6 col-md-6 text-right">
                     <a href="{{ route('product.create')}}" class="btn btn-sm btn-primary btn-create">Create New</a>
                   </div>
                 </div>
               </div>
               <div class="panel-body">
-                <table class="table table-striped table-bordered table-list">
+                <table class="table table-striped table-bordered table-responsive table-list">
                   <thead>
                     <tr>
                         <th><em class="fa fa-cog"></em></th>
                         <th><em class="fa fa-cog"></em></th>
+                        <th>View</th>
                         <th class="hidden-xs">ID</th>
                         <th>Name</th>
                         <th>Description</th>
@@ -53,6 +54,7 @@
                               </td>                           
                                                       
                                                         </td>
+                             <td> <a href="{{route('product.show',$pro->id)}}" class="btn btn-info">View</a> </td>                         
                             <td>{{ $pro->id }}</td>
                             <td>{{ $pro->title }}</td>
                             <td>{{ $pro->description}}</td>
