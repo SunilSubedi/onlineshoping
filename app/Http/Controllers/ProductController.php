@@ -86,7 +86,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::find($id);
+        return view('backend.product.show')->withProduct($product);
     }
 
     /**
@@ -151,6 +152,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::find($id);
+        $product->delete();
+        Session::flash('success','Sucessfully deleted');
+        return redirect()->route('product.index');
     }
 }

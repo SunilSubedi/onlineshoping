@@ -47,7 +47,7 @@
                               </td>
                              <td>
                                  {{Form::open(['route'=>['product.destroy',$pro->id],'method'=>'DELETE'])}}
-                                 {!! Form::submit('Delete',['class'=>' btn btn-danger fa-trash-o'])!!}
+                                 {!! Form::submit('Delete',['class'=>' btn btn-danger fa-trash-o','onclick'=>'return confirm("Do you really want to delete?")'])!!}
                                  {{Form::close()}}
                                
 
