@@ -14,10 +14,8 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/getUser',function()
-{
-	return ['1','2','3'];
-});
+Route::get('/getUser','HomeController@getAll');
+
 
 Auth::routes();
 

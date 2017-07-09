@@ -3,13 +3,14 @@
 @section('content')
 <div id="app1">
 
-        @{{name}}
-      <button type="button" @click="loadUser()">Click</button>
-     <ul>
-     <li v-show="visiblee" v-for="users in user">hello</li>
-     </ul>
- 
-    
+       
+     <div v-for="user in users">
+    <h3>Name</h3>
+    <strong>@{{user.name}}</strong>
+    <h3>Email</h3>
+    <strong>@{{user.email}}</strong>
+ </div>
+     <!--<button type="button" @click="loadUser()">Click</button>-->
 </div>
    <script src="https://unpkg.com/vue"></script>
  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

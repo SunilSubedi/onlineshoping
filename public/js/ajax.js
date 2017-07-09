@@ -3,25 +3,23 @@ var app = new Vue(
     el: '#app1',
     data:
      {
-      name:'sunil',
-      users:[''],
-      visiblee:false,
+       users:[{}],
+       visiblee:false,
+   
+
       
       },
-    methods:
+    mounted:function()
     {
-    	loadUser: function()
-    	{
+    	//alert('hello');
+    		axios.get('/getUser').then(response =>this.users = response.data);
     		
-    		axios.get('/getUser').then(function(response)
-    		{  
-                 this.users = response.data;
-                 this.visiblee=true;
-    			   
-    		});
     		
-    	}
+               // this.name=response.data.name;
+               // this.age=response.data.age;     
     	
     },
+
+
     
 })
