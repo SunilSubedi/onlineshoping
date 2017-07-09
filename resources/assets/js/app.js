@@ -17,6 +17,30 @@ window.Vue = require('vue');
 
 Vue.component('example', require('./components/Example.vue'));
 
+//Vue.component('example1', require('./components/Example1.vue'));
+
+
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: users,
+    methods:
+    {
+    	loadUser()
+    	{
+    		axios.get('/getUser').then(function(response)
+    		{
+
+    			this.$set(this.users,response);
+
+    		})
+    	}
+
+    }
+    ready:function()
+    {
+    	this.loadUser();
+    }
 });
+
+
+

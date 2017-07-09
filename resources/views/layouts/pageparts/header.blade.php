@@ -20,14 +20,9 @@
 
     <title>{{ config('app.name', 'ShopUs') }}</title>
 
-    <!-- Styles -->
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/frontend/component.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/frontend/flexslider.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/frontend/style.css') }}" rel="stylesheet" media="all">
+    
 
 </head>
 <body>

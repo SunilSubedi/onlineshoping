@@ -7,6 +7,7 @@
 
                     <div class="panel-body">
                         I'm an example component!
+                          <li v-for:"users in user">user.name</li>
                     </div>
                 </div>
             </div>
