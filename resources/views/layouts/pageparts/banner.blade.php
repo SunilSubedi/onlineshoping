@@ -8,19 +8,19 @@
 		<div  class="callbacks_container">
 					<ul class="rslides" id="slider4">
 					<li>
-								<div class="banner-info">
+								<div class="banner-info wow bounceInDown" data-wow-duration="1s" data-wow-delay="0.5s">
 									<h3>Smart But Casual</h3>
 									<p>Start your shopping here...</p>
 								</div>
 							</li>
 							<li>
-								<div class="banner-info">
+								<div class="banner-info wow bounceInDown" data-wow-duration="1s" data-wow-delay="1s">
 								   <h3>Shop Online</h3>
 									<p>Start your shopping here...</p>
 								</div>
 							</li>
 							<li>
-								<div class="banner-info">
+								<div class="banner-info wow bounceInDown" data-wow-duration="1s" data-wow-delay="1.5s">
 								  <h3>Pack your Bag</h3>
 									<p>Start your shopping here...</p>
 								</div>								
