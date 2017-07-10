@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
 
           $user = User::all();
-          die($user);
+          
           return $user->toJson();
 
 

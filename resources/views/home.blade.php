@@ -1,18 +1,52 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="app1">
+	
+	<!-- header-section-ends -->
+	
+	
+		</div>
+		<!-- content-section-starts-here -->
+		<div class="container">
+			<div class="main-content">
+				@component('component.online-strip')
+				@endcomponent
+				<div class="products-grid">
+				<header>
+					<h3 class="head text-center">Latest Products</h3>
+				</header>
+					<div class="col-md-4 product simpleCart_shelfItem text-center">
+						<a href="single.html"><img src="images/p1.jpg" alt="" /></a>
+						<div class="mask">
+							<a href="single.html">Quick View</a>
+						</div>
+						<a class="product_name" href="single.html">Sed ut perspiciatis</a>
+						<p><a class="item_add" href="#"><i></i> <span class="item_price">$329</span></a></p>
+					</div>
+					<div class="col-md-4 product simpleCart_shelfItem text-center">
+						<a href="single.html"><img src="images/p2.jpg" alt="" /></a>
+						<div class="mask">
+							<a href="single.html">Quick View</a>
+						</div>
+						<a class="product_name" href="single.html">great explorer</a>
+						<p><a class="item_add" href="#"><i></i> <span class="item_price">$599.8</span></a></p>
+					</div>
+					<div class="col-md-4 product simpleCart_shelfItem text-center">
+						<a href="single.html"><img src="images/p3.jpg" alt="" /></a>
+						<div class="mask">
+							<a href="single.html">Quick View</a>
+						</div>
+						<a class="product_name" href="single.html">similique sunt</a>
+						<p><a class="item_add" href="#"><i></i> <span class="item_price">$359.6</span></a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
 
-       
-     <div v-for="user in users">
-    <h3>Name</h3>
-    <strong>@{{user.name}}</strong>
-    <h3>Email</h3>
-    <strong>@{{user.email}}</strong>
- </div>
-     <!--<button type="button" @click="loadUser()">Click</button>-->
-</div>
-   <script src="https://unpkg.com/vue"></script>
- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script type="text/javascript" src="{{ asset('js/ajax.js')}}"></script>
+		</div>
+		
+		
+	
+
+   
 @endsection

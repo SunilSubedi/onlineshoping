@@ -22,7 +22,9 @@
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-    
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('css/flexslider.css') }}" type="text/css" media="screen" />
+
 
 </head>
 <body>
